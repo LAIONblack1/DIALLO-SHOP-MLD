@@ -1,0 +1,38 @@
+export const initialProducts = [
+  {
+    id: 1,
+    name: "T-Shirt Premium",
+    price: 29.99,
+    category: "vêtements",
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    stock: 10,
+    description: "T-shirt en coton bio, confortable et durable.",
+  },
+  {
+    id: 2,
+    name: "Casque Audio Bluetooth",
+    price: 89.99,
+    category: "électronique",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+    stock: 5,
+    description: "Casque sans fil avec réduction de bruit.",
+  },
+  {
+    id: 3,
+    name: "Montre Connectée",
+    price: 199.99,
+    category: "électronique",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+    stock: 8,
+    description: "Montre fitness avec GPS et suivi cardiaque.",
+  },
+  {
+    id: 4,
+    name: "Sac à Dos Urbain",
+    price: 49.99,
+    category: "accessoires",
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+    stock: 15,
+    description: "Sac étanche 15L pour ordinateur portable.",
+  },
+];
