@@ -1,23 +1,29 @@
-import { useState } from "react";
-import { useCart } from "../contexts/CartContext";
-import { useAuth } from "../contexts/AuthContext";
-import { useNotification } from "../contexts/NotificationContext";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 export default function Checkout() {
-  const { cartItems, totalPrice, clearCart } = useCart();
-  const { user } = useAuth();
-  const { showSuccess } = useNotification();
   const router = useRouter();
-  const [form, setForm] = useState({ address: "", city: "", postal: "" });
 
-  if (cartItems.length === 0) {
-    router.push("/cart");
-    return null;
-  }
+  useEffect(() => {
+    // Redirection vers l'accueil
+    router.push("/");
+  }, [router]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        fontSize: "24px",
+        fontWeight: "bold",
+      }}
+    >
+      Chargement...
+    </div>
+  );
+}
     // Sauvegarde commande fictive
     const orders = JSON.parse(localStorage.getItem("orders") || "[]");
     const newOrder = {
@@ -47,5 +53,4 @@ export default function Checkout() {
         <button type="submit" className="btn-primary w-full">Confirmer la commande</button>
       </form>
     </div>
-  );
-    }
+  
