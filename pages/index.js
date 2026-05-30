@@ -1,24 +1,37 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <div style={{
-      background: '#020617',
-      color: 'white',
-      minHeight: '100vh',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column'
-    }}>
-      <h1 style={{
-        fontSize: '60px',
-        color: '#22c55e'
-      }}>
-        Diallo Shop MLD
-      </h1>
+    <div style={styles.container}>
+      <h1>🔥 Shopify Africa</h1>
 
-      <p>
-        Mon site fonctionne maintenant 🚀
-      </p>
+      <p>Marketplace mondiale moderne</p>
+
+      <Link href="/shop">
+        <button style={styles.btn}>
+          Entrer dans la boutique 🛍
+        </button>
+      </Link>
     </div>
-  )
+  );
 }
+
+const styles = {
+  container: {
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    fontFamily: "Arial",
+  },
+
+  btn: {
+    padding: 14,
+    border: "none",
+    background: "black",
+    color: "white",
+    borderRadius: 8,
+    cursor: "pointer",
+  },
+};
